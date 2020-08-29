@@ -1,0 +1,8 @@
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Shared\bin\Debug\netstandard2.0\PizzaParty.Shared.deps.json
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Shared\bin\Debug\netstandard2.0\PizzaParty.Shared.dll
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Shared\bin\Debug\netstandard2.0\PizzaParty.Shared.pdb
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Shared\obj\Debug\netstandard2.0\PizzaParty.Shared.csprojAssemblyReference.cache
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Shared\obj\Debug\netstandard2.0\PizzaParty.Shared.AssemblyInfoInputs.cache
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Shared\obj\Debug\netstandard2.0\PizzaParty.Shared.AssemblyInfo.cs
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Shared\obj\Debug\netstandard2.0\PizzaParty.Shared.dll
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Shared\obj\Debug\netstandard2.0\PizzaParty.Shared.pdb

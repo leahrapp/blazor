@@ -1,0 +1,57 @@
+﻿@page "/"
+@using PizzaParty.Shared
+@using System.Linq
+@using System.Threading.Tasks
+
+@inject IOrderService orderService
+@inject IMenuService menuService
+<h1>Our Pizza Menu</h1>
+<PizzaList Title="Our Selected List of Pizzas"
+           Menu="@State.Menu"
+           Selected="@((pizza)=> AddToBasket(pizza))"/>
+
+
+<!--End Menu-->
+<!-- Shopping Basket-->
+<ShoppingBasket Title="your Order" Basket="@State.Basket" GetPizzaFromId="@State.Menu.GetPizza" Selected="@(pos=>RemoveFromBasket(pos))"/>
+<!--End Shopping Basket-->
+
+
+
+<!--Customer Info-->
+<h1>Please Enter your details below</h1>
+
+<CustomerEntry Title="Please Enter your details below" @bind-Customer="@State.Basket.Customer" Submit="@(async(_)=> await PlaceOrder())"/>
+<!--End Customer -->
+<p>@State.ToJson()</p>
+@code {
+    private State State { get; } = new State();
+
+    protected override async Task OnInitializedAsync()
+    {
+        State.Menu = await menuService.GetMenu();
+        this.State.Basket.Customer.PropertyChanged += (sender, e) => this.StateHasChanged();
+    }
+    private void AddToBasket (Pizza pizza)
+    {
+        Console.WriteLine($"Added { pizza.Name}");
+        State.Basket.Add(pizza.Id);
+        StateHasChanged();
+    }
+
+    private void RemoveFromBasket(int pos)
+    {
+        State.Basket.RemoveAt(pos);
+        StateHasChanged();
+    }
+
+    private async Task PlaceOrder()
+    {
+
+        await orderService.PlaceOrder(State.Basket);
+    }
+    protected override void OnInitialized()
+    {
+        this.State.Basket.Customer.PropertyChanged += (sender, e) => this.StateHasChanged();
+    }
+}

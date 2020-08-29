@@ -1,0 +1,4 @@
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Extensions.Validation\obj\Debug\netstandard2.0\Extensions.Validation.csprojAssemblyReference.cache
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Extensions.Validation\obj\Debug\netstandard2.0\staticwebassets\Extensions.Validation.StaticWebAssets.Manifest.cache
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Extensions.Validation\obj\Debug\netstandard2.0\staticwebassets\Extensions.Validation.StaticWebAssets.xml
+C:\Users\Leah\source\repos\PizzaParty\PizzaParty\Extensions.Validation\obj\Debug\netstandard2.0\Extensions.Validation.RazorComponent.input.cache

@@ -1,0 +1,36 @@
+﻿@using PizzaParty.Shared
+@using Extensions
+
+    <fieldset>
+        <p>
+            <label for="name">Name: </label>
+            <input id="name" @bind="@Customer.Name" />
+           <ValidationErrors Subject="@Customer" Property="@nameof(Customer.Name)"/>
+        </p>
+        <p>
+            <label for="street">Street:</label>
+            <input id="street" @bind="@Customer.Street" />
+            <ValidationErrors Subject="@Customer" Property="@nameof(Customer.Street)" />
+        </p>
+        <p>
+            <label for="city">City:</label>
+            <input id="city" @bind="@Customer.City" />
+            <ValidationErrors Subject="@Customer" Property="@nameof(Customer.City)" />
+
+            
+        </p>
+        <button @onclick="@(()=>Submit(Customer))" disabled="@Customer.HasErrors">Checkout</button>
+    </fieldset>
+
+@code {
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public Customer Customer { get; set; }
+
+    [Parameter]
+    public Action<Customer> Submit { get; set; }
+    [Parameter]
+    public Action<Customer> CustomerChanged { get; set; }
+}
